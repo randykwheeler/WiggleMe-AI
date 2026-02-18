@@ -1,5 +1,6 @@
 // WiggleMe AI - AI Movement Engine Header
 // Human-kinematic movement generation with behavioral fingerprinting
+// v2.0: Markov chains, velocity curves, persistent fingerprints, adaptive learning
 #pragma once
 
 #include <windows.h>
@@ -10,6 +11,8 @@
 #include <algorithm>
 #include <atomic>
 #include <string>
+#include <fstream>
+#include <cstdint>
 
 // ============================================================================
 // Point2D - Basic 2D point with velocity
@@ -32,6 +35,73 @@ struct MovementSample {
     double angle;       // direction of movement (radians)
     double timestamp;   // seconds since recording start
     bool isClick;       // was there a click at this point?
+};
+
+// ============================================================================
+// MovementState - Classified movement type for Markov chains
+// ============================================================================
+enum MovementState {
+    STATE_IDLE = 0,             // No significant movement
+    STATE_DRIFT,                // Small, slow drifting
+    STATE_PRECISE_MOVE,         // Careful, targeted movement
+    STATE_FAST_SWIPE,           // Quick cross-screen move
+    STATE_OVERSHOOT_CORRECT,    // Overshoot then snap back
+    STATE_COUNT                 // Must be last
+};
+
+// ============================================================================
+// VelocityCurve - Learned acceleration/deceleration profile
+// ============================================================================
+struct VelocityCurve {
+    static const int NUM_SAMPLES = 32;  // Normalized curve resolution
+    double samples[NUM_SAMPLES];        // Speed multiplier at each % of movement
+    int learnCount;                     // How many movements contributed
+
+    VelocityCurve() : learnCount(0) {
+        // Default: bell curve (slow start, fast middle, slow end)
+        for (int i = 0; i < NUM_SAMPLES; i++) {
+            double t = (double)i / (NUM_SAMPLES - 1);
+            samples[i] = sin(t * 3.14159265);
+        }
+    }
+};
+
+// ============================================================================
+// TransitionMatrix - Markov chain state transitions
+// ============================================================================
+struct TransitionMatrix {
+    // counts[from][to] = how many times we transitioned from state A to B
+    int counts[STATE_COUNT][STATE_COUNT];
+    // probabilities[from][to] = normalized probability
+    double probabilities[STATE_COUNT][STATE_COUNT];
+
+    TransitionMatrix() {
+        memset(counts, 0, sizeof(counts));
+        // Default uniform probabilities
+        for (int i = 0; i < STATE_COUNT; i++)
+            for (int j = 0; j < STATE_COUNT; j++)
+                probabilities[i][j] = 1.0 / STATE_COUNT;
+    }
+
+    void normalize() {
+        for (int i = 0; i < STATE_COUNT; i++) {
+            int rowTotal = 0;
+            for (int j = 0; j < STATE_COUNT; j++) rowTotal += counts[i][j];
+            if (rowTotal > 0) {
+                for (int j = 0; j < STATE_COUNT; j++)
+                    probabilities[i][j] = (double)counts[i][j] / rowTotal;
+            }
+        }
+    }
+
+    MovementState sampleNext(MovementState current, double randomVal) const {
+        double cum = 0;
+        for (int j = 0; j < STATE_COUNT; j++) {
+            cum += probabilities[current][j];
+            if (randomVal <= cum) return (MovementState)j;
+        }
+        return STATE_DRIFT; // fallback
+    }
 };
 
 // ============================================================================
@@ -120,7 +190,7 @@ private:
 };
 
 // ============================================================================
-// AIMovementEngine - Core AI movement generation
+// AIMovementEngine - Core AI movement generation (v2.0)
 // ============================================================================
 class AIMovementEngine {
 public:
@@ -135,18 +205,30 @@ public:
     bool hasFingerprint() const { return m_fingerprint.isValid; }
     const UserFingerprint& getFingerprint() const { return m_fingerprint; }
 
-    // --- Movement Generation ---
-    // Generate a complete trajectory from A to B
-    std::vector<Point2D> generateTrajectory(Point2D start, Point2D end);
+    // --- Markov Chain ---
+    const TransitionMatrix& getTransitions() const { return m_transitions; }
+    bool hasMarkovData() const { return m_markovTrained; }
+    MovementState getCurrentState() const { return m_currentState; }
 
-    // Generate a single "idle" movement (small, natural drift)
+    // --- Velocity Curves ---
+    bool hasVelocityCurves() const { return m_velocityCurvesTrained; }
+    int getVelocityCurveCount() const;
+
+    // --- Persistence ---
+    bool saveFingerprint(const char* path);
+    bool loadFingerprint(const char* path);
+
+    // --- Real-Time Adaptive Learning ---
+    void adaptFromLiveSession(double observedSpeed, double observedPause);
+    void setAdaptationRate(double rate);  // 0.0 = no adaptation, 1.0 = instant
+
+    // --- Movement Generation ---
+    std::vector<Point2D> generateTrajectory(Point2D start, Point2D end);
     std::vector<Point2D> generateIdleMovement(Point2D current);
 
-    // Generate a complete activity session (multiple movements + pauses)
-    // Returns series of movements with timing
     struct TimedMovement {
         Point2D target;
-        double delayBeforeMs;   // pause before this movement
+        double delayBeforeMs;
         bool includeClick;
     };
     std::vector<TimedMovement> generateActivitySession(
@@ -162,7 +244,7 @@ public:
     void setTemporalProfile(const TemporalProfile& profile);
 
     // --- Configuration ---
-    void setIntensity(double intensity);  // 0.0 = minimal, 1.0 = very active
+    void setIntensity(double intensity);
     void setDetectionAvoidance(bool enabled);
     void setSmartPauses(bool enabled);
 
@@ -175,22 +257,44 @@ private:
     double generateSpeed();
     Point2D generateOvershoot(Point2D target, Point2D direction);
 
+    // --- Markov / Learning Internals ---
+    MovementState classifyMovementState(double speed, double distance, double angleChange);
+    void buildTransitionMatrix();
+    void buildVelocityCurves();
+    double sampleVelocityCurve(double distance, double normalizedT);
+
     // --- State ---
     UserFingerprint m_fingerprint;
     TemporalProfile m_temporal;
+    TransitionMatrix m_transitions;
     PerlinNoise1D m_perlin;
     std::mt19937 m_rng;
     std::normal_distribution<double> m_speedDist;
     std::normal_distribution<double> m_pauseDist;
     std::uniform_real_distribution<double> m_uniform;
 
+    // Markov state
+    MovementState m_currentState;
+    bool m_markovTrained;
+
+    // Velocity curves (3 distance categories: short <100px, medium 100-500px, long >500px)
+    VelocityCurve m_velocityCurves[3];
+    bool m_velocityCurvesTrained;
+
     // Recording state
     bool m_isRecording;
     std::vector<MovementSample> m_recordedSamples;
     std::chrono::steady_clock::time_point m_recordStart;
 
+    // Adaptation
+    double m_adaptationRate;
+
     // Config
     double m_intensity;
     bool m_detectionAvoidance;
     bool m_smartPauses;
+
+    // File format magic
+    static const uint32_t FINGERPRINT_MAGIC = 0x574D4149; // "WMAI"
+    static const uint32_t FINGERPRINT_VERSION = 2;
 };
