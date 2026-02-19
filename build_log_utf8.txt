@@ -1,0 +1,15 @@
+﻿============================================
+ WiggleMe AI - Build Script
+============================================
+
+Compiling WiggleMe AI...
+main.cpp
+src\main.cpp(301): error C2660: 'wcscpy_s': function does not take 2 arguments
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstring.h(39): note: see declaration of 'wcscpy_s'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstring.h(113): note: could be 'errno_t wcscpy_s(wchar_t (&)[_Size],const wchar_t *) noexcept'
+src\main.cpp(301): note: 'errno_t wcscpy_s(wchar_t (&)[_Size],const wchar_t *) noexcept': could not deduce template argument for 'wchar_t (&)[_Size]' from 'CHAR [128]'
+src\main.cpp(301): note: while trying to match the argument list '(CHAR [128], const wchar_t [12])'
+ai_movement.cpp
+Generating Code...
+
+BUILD FAILED!

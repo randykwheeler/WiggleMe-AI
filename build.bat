@@ -18,7 +18,7 @@ if exist "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\B
 
 echo.
 echo Compiling WiggleMe AI...
-cl /EHsc /W4 /O2 /std:c++17 ^
+cl /EHsc /W4 /O2 /std:c++17 /DUNICODE /D_UNICODE ^
     /I"include" ^
     src\main.cpp src\ai_movement.cpp ^
     user32.lib gdi32.lib comctl32.lib shell32.lib shlwapi.lib ^

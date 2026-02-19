@@ -1,0 +1,146 @@
+============================================
+ WiggleMe AI - Build Script
+============================================
+
+Compiling WiggleMe AI...
+Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35222 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+main.cpp
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(104): error C2065: 'CALLBACK': undeclared identifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(104): error C2065: 'LPFNPSPCALLBACKA': undeclared identifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(104): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(104): error C2513: 'int': no variable declared before '='
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(104): error C2143: syntax error: missing ';' before '('
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(104): error C2146: syntax error: missing ')' before identifier 'hwnd'
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(104): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(104): error C2146: syntax error: missing ';' before identifier 'hwnd'
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(104): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(105): error C2143: syntax error: missing ')' before '*'
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(105): error C2143: syntax error: missing ';' before '*'
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(105): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(105): error C2146: syntax error: missing ')' before identifier 'hwnd'
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(140): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(140): error C2146: syntax error: missing ';' before identifier 'PROPSHEETPAGE_RESOURCE'
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(140): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(198): error C3646: 'dwSize': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(198): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(198): error C3646: 'dwFlags': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(198): error C3646: 'hInstance': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(198): error C3646: 'pszTemplate': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(198): error C3646: 'pResource': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(198): warning C4408: anonymous union did not declare any data members
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(198): error C3646: 'hIcon': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(198): error C3646: 'pszIcon': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(198): error C3646: 'pszTitle': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(198): error C3646: 'pfnDlgProc': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(198): error C3646: 'lParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(198): error C3646: 'pfnCallback': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(204): error C3646: 'dwSize': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(204): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(204): error C3646: 'dwFlags': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(204): error C3646: 'hInstance': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(204): error C3646: 'pszTemplate': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(204): error C3646: 'pResource': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(204): warning C4408: anonymous union did not declare any data members
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(204): error C3646: 'hIcon': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(204): error C3646: 'pszIcon': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(204): error C3646: 'pszTitle': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(204): error C3646: 'pfnDlgProc': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(204): error C3646: 'lParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(204): error C3646: 'pfnCallback': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(206): error C3646: 'pszHeaderTitle': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(206): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(207): error C3646: 'pszHeaderSubTitle': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(207): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(213): error C3646: 'dwSize': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(213): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(213): error C3646: 'dwFlags': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(213): error C3646: 'hInstance': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(213): error C3646: 'pszTemplate': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(213): error C3646: 'pResource': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(213): warning C4408: anonymous union did not declare any data members
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(213): error C3646: 'hIcon': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(213): error C3646: 'pszIcon': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(213): error C3646: 'pszTitle': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(213): error C3646: 'pfnDlgProc': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(213): error C3646: 'lParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(213): error C3646: 'pfnCallback': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(215): error C3646: 'pszHeaderTitle': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(215): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(216): error C3646: 'pszHeaderSubTitle': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(216): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(218): error C3646: 'hActCtx': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(218): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(225): error C3646: 'dwSize': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(225): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(225): error C3646: 'dwFlags': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(225): error C3646: 'hInstance': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(225): error C3646: 'pszTemplate': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(225): error C3646: 'pResource': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(225): warning C4408: anonymous union did not declare any data members
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(225): error C3646: 'hIcon': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(225): error C3646: 'pszIcon': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(225): error C3646: 'pszTitle': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(225): error C3646: 'pfnDlgProc': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(225): error C3646: 'lParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(225): error C3646: 'pfnCallback': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(227): error C3646: 'pszHeaderTitle': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(227): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(228): error C3646: 'pszHeaderSubTitle': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(228): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(230): error C3646: 'hActCtx': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(230): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(234): error C3646: 'hbmHeader': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(234): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(235): error C3646: 'pszbmHeader': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(235): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(233): warning C4408: anonymous union did not declare any data members
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(244): error C3646: 'dwSize': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(244): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(244): error C3646: 'dwFlags': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(244): error C3646: 'hInstance': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(244): error C3646: 'pszTemplate': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(244): error C3646: 'pResource': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(244): warning C4408: anonymous union did not declare any data members
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(244): error C3646: 'hIcon': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(244): error C3646: 'pszIcon': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(244): error C3646: 'pszTitle': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(244): error C3646: 'pfnDlgProc': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(244): error C3646: 'lParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(244): error C3646: 'pfnCallback': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(250): error C3646: 'dwSize': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(250): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(250): error C3646: 'dwFlags': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(250): error C3646: 'hInstance': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(250): error C3646: 'pszTemplate': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(250): error C3646: 'pResource': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(250): warning C4408: anonymous union did not declare any data members
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(250): error C3646: 'hIcon': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(250): error C3646: 'pszIcon': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(250): error C3646: 'pszTitle': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(250): error C3646: 'pfnDlgProc': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(250): error C3646: 'lParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(250): error C3646: 'pfnCallback': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(252): error C3646: 'pszHeaderTitle': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(252): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(253): error C3646: 'pszHeaderSubTitle': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(253): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(259): error C3646: 'dwSize': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(259): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(259): error C3646: 'dwFlags': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(259): error C3646: 'hInstance': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(259): error C3646: 'pszTemplate': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(259): error C3646: 'pResource': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(259): warning C4408: anonymous union did not declare any data members
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(259): error C3646: 'hIcon': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(259): error C3646: 'pszIcon': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(259): error C3646: 'pszTitle': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(259): error C3646: 'pfnDlgProc': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(259): error C3646: 'lParam': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(259): error C3646: 'pfnCallback': unknown override specifier
+C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um\prsht.h(259): fatal error C1003: error count exceeds 100; stopping compilation
+ai_movement.cpp
+Generating Code...
+
+BUILD FAILED!
