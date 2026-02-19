@@ -1,5 +1,9 @@
 # WiggleMe AI
 
+<div align="center">
+  <img src="docs/hero.png" alt="WiggleMe AI Hero" width="100%">
+</div>
+
 ### AI-Powered Human-Kinematic Mouse Simulator
 
 WiggleMe AI is a next-generation mouse movement tool that uses **AI behavioral fingerprinting** to generate movements indistinguishable from real human interaction. Unlike traditional mouse jigglers that use repetitive, easily-detected patterns, WiggleMe AI learns YOUR unique movement signature and generates authentic variations every single time.
@@ -7,6 +11,7 @@ WiggleMe AI is a next-generation mouse movement tool that uses **AI behavioral f
 ## Key Features
 
 ### AI Movement Engine
+
 - **Behavioral Fingerprinting**: Records your natural mouse movements and builds a unique behavioral model
 - **WindMouse Physics**: Organic, physics-based cursor movement with gravity, wind forces, and inertia
 - **Bezier Curve Generation**: Smooth, natural arcs instead of straight-line bot movement
@@ -15,12 +20,14 @@ WiggleMe AI is a next-generation mouse movement tool that uses **AI behavioral f
 - **Speed Variance**: Natural acceleration/deceleration curves (never constant speed)
 
 ### Workplace Intelligence
+
 - **Temporal Awareness**: Automatically follows work schedule patterns (9-5, lunch breaks, afternoon slump)
 - **Meeting Detection**: Pauses during Teams/Zoom/Slack calls
 - **Manual Override Detection**: Instantly stops when you use the mouse yourself
 - **Smart Pauses**: Generates realistic pause patterns (thinking, reading, context-switching)
 
 ### Authenticity Scoring
+
 - **Real-time Score (0-100)**: Quantifies how human-like each movement is
 - **Speed Variance Analysis**: Checks for natural acceleration patterns
 - **Curve Smoothness Analysis**: Validates organic curve quality
@@ -28,6 +35,7 @@ WiggleMe AI is a next-generation mouse movement tool that uses **AI behavioral f
 - **Detection Risk Assessment**: LOW / MEDIUM / HIGH risk indicator
 
 ### Modern UI
+
 - Dark theme with real-time authenticity gauge
 - Movement statistics dashboard
 - One-click start/stop
@@ -36,7 +44,9 @@ WiggleMe AI is a next-generation mouse movement tool that uses **AI behavioral f
 ## How It Works
 
 ### 1. Learn Your Movement (Optional but Recommended)
+
 Click "LEARN MY MOVEMENT" and work normally for 2-5 minutes. The AI records:
+
 - Your typical cursor speed and variance
 - Your pause patterns and frequency
 - Your preferred screen areas
@@ -44,7 +54,9 @@ Click "LEARN MY MOVEMENT" and work normally for 2-5 minutes. The AI records:
 - Your direction bias and handedness
 
 ### 2. Generate Authentic Movement
+
 Click "START" and the AI generates movements that:
+
 - Match your personal movement fingerprint
 - Are unique every time (never repeats)
 - Follow natural acceleration/deceleration
@@ -52,7 +64,9 @@ Click "START" and the AI generates movements that:
 - Respect your work schedule
 
 ### 3. Monitor Authenticity
+
 The real-time dashboard shows:
+
 - Current authenticity score (target: 80+)
 - Detection risk level
 - Movement count and session stats
@@ -61,10 +75,12 @@ The real-time dashboard shows:
 ## Build
 
 ### Requirements
+
 - Windows 10/11
 - Visual Studio 2022 Build Tools (C++ workload)
 
 ### Build Steps
+
 ```bash
 # Clone the repository
 git clone https://github.com/randykwheeler/WiggleMe-AI.git
@@ -91,6 +107,7 @@ WiggleMe-AI/
 ```
 
 ### Core Components
+
 - **AIMovementEngine**: Generates trajectories using WindMouse physics + Bezier curves
 - **UserFingerprint**: Behavioral model learned from recorded user movements
 - **PerlinNoise1D**: Organic noise for natural jitter and speed variation
